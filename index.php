@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Demo</title>
 </head>
 <body>
 
+    <?php
+        $name = "1984";
+        $read = true;
+
+    ?>
 
 <h1>
-    <?php
-        $greeting = "Hello";
-
-        echo $greeting . ' ' .  'World';
-    ?>
+ 
+    You have read "<?php echo $name; ?>."
 
 </h1>
 
-<?php 
-
-echo '<h2>Hello World</h2>';
-
-?>
 
 
 </body>
