@@ -11,14 +11,21 @@
 
     <?php
         $name = "1984";
-        $read = true;
+        $read = false;
 
     ?>
 
 <h1>
- 
-    You have read "<?php echo $name; ?>."
+    <?php
 
+        if($read) {
+           echo "You have read $name";
+
+        } else {
+           echo "You have not read $name";
+        }
+            
+    ?>
 </h1>
 
 
