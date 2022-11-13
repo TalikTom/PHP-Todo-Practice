@@ -44,9 +44,33 @@
                 'color' => 'white',
                 'purchaseURL' => 'https://example.com',
                 'releaseYear' => 2022
+            ],
+            
+            [
+                'model' => 'Iphone 14 Pro Max',
+                'IMEI' => '3567281153548509',
+                'color' => 'white',
+                'purchaseURL' => 'https://example.com',
+                'releaseYear' => 2022
             ]   
         
         ];
+
+        function filterByColor($phones, $color) {
+
+            $filteredPhones = [];
+
+            foreach ($phones as $phone) {
+
+                if($phone['color'] === $color) {
+
+                    $filteredPhones[] = $phone;
+                }
+
+           }
+
+           return $filteredPhones;
+        };
 
        
    
@@ -81,17 +105,26 @@
 
     <?= $books[1]; ?>
 
-    <?php foreach ($phones as $phone) : ?>
+    <?php foreach (filterByColor($phones, 'white') as $phone) : ?>
 
-        <li>
-            <a href="<?= $phone['purchaseURL'] ?>">
+          
+
+            <li>
+                <a href="<?= $phone['purchaseURL'] ?>">
+            
+                <?= $phone['model'] . ' ' . $phone['releaseYear'] ?> (<?= $phone['color'] ?>);</a>
         
-            <?= $phone['model'] . ' ' . $phone['releaseYear'] ?> (<?= $phone['color'] ?>);</a>
-    
-    
-        </li>
+            </li>
+      
 
     <?php endforeach; ?>
+
+<p>
+
+
+
+</p>
+   
 
 </ul>
 
