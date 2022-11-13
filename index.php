@@ -35,7 +35,7 @@
                 'IMEI' => '356728115354819',
                 'color' => 'black',
                 'purchaseURL' => 'https://example.com',
-                'releaseYear' => 2022
+                'releaseYear' => 2021
             ],
 
             [
@@ -51,7 +51,7 @@
                 'IMEI' => '3567251153548509',
                 'color' => 'white',
                 'purchaseURL' => 'https://example.com',
-                'releaseYear' => 2021
+                'releaseYear' => 1950
             ],
             
             [
@@ -59,7 +59,7 @@
                 'IMEI' => '3567281153448509',
                 'color' => 'black',
                 'purchaseURL' => 'https://example.com',
-                'releaseYear' => 2020
+                'releaseYear' => 2010
             ]  
         
         ];
@@ -81,10 +81,10 @@
         };
 
        
-        $filteredPhones = filter($phones, function ($phone) {
+        $filteredPhones = array_filter($phones, function ($phone) {
 
-             return $phone['color'] === 'black';
-             
+             return $phone['releaseYear'] > 2000 && $phone['releaseYear'] < 2022;
+
         });
 
     ?>
