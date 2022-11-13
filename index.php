@@ -28,6 +28,26 @@
             "The road"
         ];
 
+        $phones = [
+
+            [
+                'model' => 'Iphone 14 Pro Max',
+                'IMEI' => '356728115354819',
+                'color' => 'black',
+                'purchaseURL' => 'https://example.com',
+                'releaseYear' => 2022
+            ],
+
+            [
+                'model' => 'Iphone 14 Pro Max',
+                'IMEI' => '3567281153548609',
+                'color' => 'white',
+                'purchaseURL' => 'https://example.com',
+                'releaseYear' => 2022
+            ]   
+        
+        ];
+
        
    
 
@@ -57,6 +77,20 @@
 
         <li><?= $book ?></li>
     
+    <?php endforeach; ?>
+
+    <?= $books[1]; ?>
+
+    <?php foreach ($phones as $phone) : ?>
+
+        <li>
+            <a href="<?= $phone['purchaseURL'] ?>">
+        
+            <?= $phone['model'] . ' ' . $phone['releaseYear'] ?> (<?= $phone['color'] ?>);</a>
+    
+    
+        </li>
+
     <?php endforeach; ?>
 
 </ul>
