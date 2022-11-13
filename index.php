@@ -22,6 +22,13 @@
             $message = "You have NOT read $name";
         }
             
+        $books = [
+            "Na drini ćuprija",
+            "1984",
+            "The road"
+        ];
+
+       
    
 
     ?>
@@ -32,7 +39,27 @@
         
 </h1>
 
+<ul>
 
+    <li>Na drini ćuprija</li>
+    <li>1984</li>
+    <li>The road</li>
+
+    <?php
+
+    foreach ($books as $book) {
+           echo "<li>{$book}™</li>";
+        }
+
+    ?>
+
+    <?php foreach ($books as $book) : ?>
+
+        <li><?= $book ?></li>
+    
+    <?php endforeach; ?>
+
+</ul>
 
 </body>
 </html>
