@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Demo</title>
-</head>
-<body>
-
-    <?php
+<?php
         $name = "1984";
         $read = true;
 
     
 
         if($read) {
-           $message = "You have read $name";
+        
+            $message = "You have read $name";
 
         } else {
+
             $message = "You have NOT read $name";
+            
         }
             
         $books = [
@@ -64,7 +56,7 @@
         
         ];
 
-      function filter($items, $fn) {
+        function filter($items, $fn) {
 
             $filteredItems = [];
 
@@ -75,70 +67,16 @@
                     $filteredItems[] = $item;
                 }
 
-           }
+        }
 
-           return $filteredItems;
+            return $filteredItems;
         };
 
-       
+
         $filteredPhones = array_filter($phones, function ($phone) {
 
-             return $phone['releaseYear'] > 2000 && $phone['releaseYear'] < 2022;
+            return $phone['releaseYear'] > 2000 && $phone['releaseYear'] < 2022;
 
         });
 
-    ?>
-
-<h1>
-    
-        <?= $message ?>  
-        
-</h1>
-
-<ul>
-
-    <li>Na drini ćuprija</li>
-    <li>1984</li>
-    <li>The road</li>
-
-    <?php
-
-    foreach ($books as $book) {
-           echo "<li>{$book}™</li>";
-        }
-
-    ?>
-
-    <?php foreach ($books as $book) : ?>
-
-        <li><?= $book ?></li>
-    
-    <?php endforeach; ?>
-
-    <?= $books[1]; ?>
-
-    <?php foreach($filteredPhones as $phone) : ?>
-
-          
-
-            <li>
-                <a href="<?= $phone['purchaseURL'] ?>">
-            
-                <?= $phone['model'] . ' ' . $phone['releaseYear'] ?> (<?= $phone['color'] ?>);</a>
-        
-            </li>
-      
-
-    <?php endforeach; ?>
-
-<p>
-
-
-
-</p>
-   
-
-</ul>
-
-</body>
-</html>
+?>
