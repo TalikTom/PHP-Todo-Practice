@@ -78,5 +78,9 @@
             return $phone['releaseYear'] > 2000 && $phone['releaseYear'] < 2022;
 
         });
+        
+
+require "index.view.php";
 
 ?>
+
