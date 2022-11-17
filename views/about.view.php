@@ -1,4 +1,4 @@
-<?php require('header/nav.php'); ?>
+<?php require('partials/header.php'); ?>
 
 <?php require('partials/nav.php'); ?>
     <header class="bg-white shadow">
@@ -12,4 +12,4 @@
     </div>
     </main>
 
-<?php require('footer/nav.php'); ?>
+<?php require('partials/footer.php'); ?>

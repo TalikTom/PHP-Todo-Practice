@@ -1,4 +1,4 @@
-<?php require('partials/nav.php'); ?>
+<?php require('partials/header.php'); ?>
 
 <?php require('partials/nav.php'); ?>
 
@@ -16,5 +16,5 @@
         <!-- /End replace -->
     </div>
     </main>
-    
-<?php require('partials/nav.php'); ?>
+
+<?php require('partials/footer.php'); ?>
