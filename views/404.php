@@ -2,7 +2,6 @@
 
 <?php require('partials/nav.php'); ?>
 
-<?php require('partials/banner.php'); ?>   
 
 <main>
 
@@ -12,7 +11,7 @@
 
         <p>
 
-            <a href="/">Back to home page</a>
+            <a href="/" class="text-blue underline">Back to home page</a>
 
         </p>
         
