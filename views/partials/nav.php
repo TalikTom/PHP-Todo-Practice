@@ -12,7 +12,7 @@
 
                 <a href="/PHP-Todo-Practice/about.php" class="<?= $_SERVER['REQUEST_URI'] === '/PHP-Todo-Practice/about.php' ? "bg-gray-900 text-white" : "text-gray-300" ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About us</a>
 
-                <a href="/PHP-Todo-Practice/contact.php" class="<?= $_SERVER['REQUEST_URI'] === '/PHP-Todo-Practice/index.php' ? "bg-gray-900 text-white" : "text-gray-300" ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact us</a>
+                <a href="/PHP-Todo-Practice/contact.php" class="<?= $_SERVER['REQUEST_URI'] === '/PHP-Todo-Practice/contact.php' ? "bg-gray-900 text-white" : "text-gray-300" ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact us</a>
             </div>
             </div>
         </div>
