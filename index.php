@@ -1,10 +1,14 @@
 <?php
 
-echo "<pre>";
-var_dump($_SERVER);
-echo "</pre>";
+function dd($value) {
+    echo "<pre>";
+    var_dump($value);
+    echo "</pre>";
 
-die();
+    die();
+}
+
+dd($_SERVER);
 
 $heading = "Home";
 
