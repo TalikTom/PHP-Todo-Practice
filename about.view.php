@@ -25,7 +25,7 @@
 
                 <a href="/PHP-Todo-Practice/about.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
 
-                <a href="/PHP-Todo-Practice/contact.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                <a href="/contact.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
             </div>
             </div>
         </div>
@@ -139,11 +139,7 @@
     </header>
     <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <!-- Replace with your content -->
-        <div class="px-4 py-6 sm:px-0">
-        <div class="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
-        </div>
-        <!-- /End replace -->
+        <p>Now you are on the About page</p>
     </div>
     </main>
 </div>
