@@ -1,10 +1,9 @@
-<?php
+<?php 
 
-require "functions.php";
+require 'functions.php';
 
-$heading = "Home";
+$uri = $_SERVER['REQUEST_URI'];
 
-require "views/index.view.php";
-
-
-
+if ($uri === '/') {
+    require 'controllers/index.php';
+}
