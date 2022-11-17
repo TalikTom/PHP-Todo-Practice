@@ -15,7 +15,14 @@ $routes = [
 
 # if the key exists in the $routes array, require corresponding key within the array.
 
-if (array_key_exists($uri, $routes)) 
+if (array_key_exists($uri, $routes)) {
 require $routes[$uri];
+
+} else {
+    http_response_code(404);
+    echo "Not found.";
+};
+
+
 ?>
 
