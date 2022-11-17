@@ -20,7 +20,10 @@ require $routes[$uri];
 
 } else {
     http_response_code(404);
-    echo "Not found.";
+    
+
+require "views/404.php";
+
 };
 
 
