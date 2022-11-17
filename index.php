@@ -13,16 +13,23 @@ $routes = [
     '/contact' => 'controllers/contact.php'
 ];
 
+function abort($code) {
+    http_response_code($code);
+    
+
+    require "views/{$code}.php";
+    
+    die();
+}
+
 # if the key exists in the $routes array, require corresponding key within the array.
 
 if (array_key_exists($uri, $routes)) {
 require $routes[$uri];
 
 } else {
-    http_response_code(404);
     
-
-require "views/404.php";
+    abort();
 
 };
 
