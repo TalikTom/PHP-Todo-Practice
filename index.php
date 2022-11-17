@@ -8,8 +8,6 @@ function dd($value) {
     die();
 }
 
-dd($_SERVER);
-
 $heading = "Home";
 
 require "views/index.view.php";
