@@ -2,6 +2,8 @@
 
 require 'functions.php';
 
+require 'Database.php';
+
 // require 'router.php';
 
 
@@ -21,26 +23,11 @@ require 'functions.php';
 
 
 
-class Database {
 
-    public function query($query)
-    {
-        $dsn ="mysql:host=localhost;port=3306;dbname=phppractice;user='root';charset=utf8mb4";
-
-        $pdo = new PDO($dsn);
-
-        $statement = $pdo->prepare($query);
-
-        $statement->execute();
-
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
-
-    }
-}
 
 $db = new Database();
 
-$posts = $db->query("SELECT * FROM title where sifra = 1");
+$posts = $db->query("SELECT * FROM title")->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($posts as $post) {
     echo "<li>" . $post['title'] . "</li>";
