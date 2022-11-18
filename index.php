@@ -8,21 +8,43 @@ require 'functions.php';
 
 // connect to MySQL database.
 
-$dsn ="mysql:host=localhost;port=3306;dbname=phppractice;user='root';charset=utf8mb4";
+// $dsn ="mysql:host=localhost;port=3306;dbname=phppractice;user='root';charset=utf8mb4";
 
-$pdo = new PDO($dsn);
+// $pdo = new PDO($dsn);
 
-$statement = $pdo->prepare("SELECT * FROM title");
+// $statement = $pdo->prepare("SELECT * FROM title");
 
-$statement->execute();
+// $statement->execute();
 
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+// $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+class Database {
+
+    public function query($query)
+    {
+        $dsn ="mysql:host=localhost;port=3306;dbname=phppractice;user='root';charset=utf8mb4";
+
+        $pdo = new PDO($dsn);
+
+        $statement = $pdo->prepare($query);
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+}
+
+$db = new Database();
+
+$posts = $db->query("SELECT * FROM title where sifra = 1");
 
 foreach ($posts as $post) {
     echo "<li>" . $post['title'] . "</li>";
 }
-
-
 
 
 // class Person 
