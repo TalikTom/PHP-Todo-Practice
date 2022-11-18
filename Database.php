@@ -4,17 +4,10 @@ class Database {
 
     public $connection;
 
-    public function __construct()
+    public function __construct($config)
 
     {
-        $config = [
-
-            'host' => 'localhost',
-            'port' => 3306,
-            'dbname' => 'phppractice',
-            'charset' => 'utf8mb4'
-
-        ];
+       
 
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
