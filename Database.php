@@ -11,7 +11,7 @@ class Database {
 
             'host' => 'localhost',
             'port' => 3306,
-            'dbname' => 'myapp',
+            'dbname' => 'phppractice',
             'charset' => 'utf8mb4'
 
         ];
