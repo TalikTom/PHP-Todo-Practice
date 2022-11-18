@@ -3,9 +3,11 @@
 
 return [
 
-    'host' => 'localhost',
-    'port' => 3306,
-    'dbname' => 'phppractice',
-    'charset' => 'utf8mb4'
+    'database' => [
+        'host' => 'localhost',
+        'port' => 3306,
+        'dbname' => 'phppractice',
+        'charset' => 'utf8mb4'
+    ]
 
 ];
